@@ -1,6 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MyContainerComponent } from './myContainer/myContainer.component';
+import { TopnavComponent } from './myContainer/topnav/topnav.component';
 
 @Component({
   selector: 'app-root',

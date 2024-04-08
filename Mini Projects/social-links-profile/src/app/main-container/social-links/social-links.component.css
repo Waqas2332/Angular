@@ -1,0 +1,25 @@
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.links button {
+  background: hsl(0, 0%, 20%);
+  width: 80%;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.links button:hover {
+  background-color: hsl(75, 94%, 57%);
+  color: #333;
+}

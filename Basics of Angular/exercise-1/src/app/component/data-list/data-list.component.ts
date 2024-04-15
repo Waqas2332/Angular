@@ -11,4 +11,8 @@ import { Component, Input } from '@angular/core';
 export class DataListComponent {
   @Input() title: string = '';
   @Input() users: string[] = [];
+
+  deleteUsers(id: number) {
+    this.users.splice(id, 1);
+  }
 }

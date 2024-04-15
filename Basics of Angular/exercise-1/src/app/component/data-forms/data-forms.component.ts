@@ -14,6 +14,11 @@ export class DataFormsComponent {
   @Input() data: string[] = [];
 
   emitEvent(data: HTMLInputElement) {
+    if (data.value.trim() == '') {
+      alert('Please Enter a value');
+      return;
+    }
     this.btnClick.emit(data.value);
+    data.value = '';
   }
 }

@@ -13,13 +13,13 @@
   </div>
   <div class="row mt-4">
     <app-data-forms
-      title="User"
+      [title]="title1"
       class="col-6 offset-0 col-md-4 offset-md-2"
       [data]="user"
       (btnClick)="addUser($event)"
     ></app-data-forms>
     <app-data-forms
-      title="Admin"
+      [title]="title2"
       [data]="admin"
       class="col-6 col-md-4"
       (btnClick)="addAdmin($event)"

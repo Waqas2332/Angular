@@ -3,25 +3,25 @@
     <app-data-list
       [title]="title1"
       [users]="user"
-      class="col-4 offset-2"
+      class="col-6 offset-0 col-md-4 offset-md-2"
     ></app-data-list>
     <app-data-list
       [title]="title2"
-      class="col-4"
+      class="col-6 col-md-4"
       [users]="admin"
     ></app-data-list>
   </div>
   <div class="row mt-4">
     <app-data-forms
       title="User"
-      class="col-4 offset-2"
+      class="col-6 offset-0 col-md-4 offset-md-2"
       [data]="user"
       (btnClick)="addUser($event)"
     ></app-data-forms>
     <app-data-forms
       title="Admin"
       [data]="admin"
-      class="col-4"
+      class="col-6 col-md-4"
       (btnClick)="addAdmin($event)"
     ></app-data-forms>
   </div>

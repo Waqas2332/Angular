@@ -1,0 +1,12 @@
+<div class="border rounded-2 p-3 d-flex flex-column">
+  <h4 class="text-success align-self-start">{{ title }}</h4>
+  <input type="text" class="form-control" #uname placeholder="Enter..." />
+  <button class="btn btn-success mt-3 mb-2" (click)="emitEvent(uname)">
+    Create
+  </button>
+  @if (data.length > 0) {
+  <div>Total Users : {{ data.length }}</div>
+  }@else {
+  <div>No Users Found</div>
+  }
+</div>

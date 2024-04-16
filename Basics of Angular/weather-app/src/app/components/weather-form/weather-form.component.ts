@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { WeatherService } from '../../service/weather.service';
 
 @Component({
   selector: 'app-weather-form',
@@ -8,9 +9,12 @@ import { Component } from '@angular/core';
   styleUrl: './weather-form.component.css',
 })
 export class WeatherFormComponent {
-  getCity(city: HTMLInputElement) {
-    console.log(city.value);
+  constructor(private weather: WeatherService) {}
 
+  getCity(city: HTMLInputElement) {
+    this.weather
+      .getWeatherByCityName(city.value)
+      .subscribe((data) => console.log(data));
     city.value = '';
   }
 }

@@ -1,0 +1,23 @@
+.weather-form {
+  display: flex;
+}
+
+.weather-form input {
+  padding: 10px 15px;
+  width: 300px;
+  border: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.weather-form input:focus {
+  outline: none;
+}
+.weather-form button {
+  background: white;
+  border: none;
+  width: 70px;
+  cursor: pointer;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}

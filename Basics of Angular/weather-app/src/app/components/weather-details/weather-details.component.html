@@ -1,0 +1,8 @@
+<div class="weather-details">
+  @if (data) {
+  <p>City : {{ data.name }} {{ data.sys.country }}</p>
+  <p>Temperature : {{ (data.main.temp - 273.15).toFixed(2) }} C</p>
+  }@else {
+  <p>Enter City to search</p>
+  }
+</div>

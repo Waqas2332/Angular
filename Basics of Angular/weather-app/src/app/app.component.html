@@ -1,1 +1,2 @@
-<app-weather-form></app-weather-form>
+<app-weather-form (getWeather)="getWeatherData($event)"></app-weather-form>
+<app-weather-details [data]="data"></app-weather-details>

@@ -12,11 +12,16 @@ import { Product } from '../../Product';
 })
 export class FeaturedProductsComponent implements OnInit {
   products: Product[] = [];
+  isLoading: boolean = false;
   constructor(private productService: ProductsService) {}
 
-  ngOnInit(): void {
+  fetchProducts() {
     this.productService
       .getProducts()
       .subscribe((products) => (this.products = products));
+  }
+
+  ngOnInit(): void {
+    this.fetchProducts();
   }
 }

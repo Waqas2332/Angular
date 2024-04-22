@@ -17,7 +17,7 @@ export class FeaturedProductsComponent implements OnInit {
 
   fetchProducts() {
     this.productService
-      .getProducts()
+      .getProducts('?limit=3')
       .subscribe((products) => (this.products = products));
   }
 

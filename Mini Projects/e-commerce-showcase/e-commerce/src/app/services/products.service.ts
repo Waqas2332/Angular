@@ -7,11 +7,12 @@ import { Product } from '../Product';
   providedIn: 'root',
 })
 export class ProductsService {
-  private url = 'https://fakestoreapi.com/products?limit=3';
+  private url = 'https://fakestoreapi.com/products';
 
   constructor(private http: HttpClient) {}
 
-  getProducts(): Observable<Product[]> {
+  getProducts(limit: string): Observable<Product[]> {
+    this.url = this.url + limit;
     return this.http.get<Product[]>(this.url);
   }
 }

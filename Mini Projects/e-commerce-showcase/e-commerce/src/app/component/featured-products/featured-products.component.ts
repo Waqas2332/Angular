@@ -17,9 +17,10 @@ export class FeaturedProductsComponent implements OnInit {
   constructor(private productService: ProductsService, private route: Router) {}
 
   fetchProducts() {
-    this.productService
-      .getProducts('?limit=3')
-      .subscribe((products) => (this.products = products));
+    this.productService.fetchProducts().subscribe((products) => {
+      this.productService.setProducts(products);
+      this.products = this.productService.getProducts().slice(0, 3);
+    });
   }
 
   ngOnInit(): void {

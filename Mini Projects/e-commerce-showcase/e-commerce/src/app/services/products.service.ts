@@ -8,11 +8,19 @@ import { Product } from '../Product';
 })
 export class ProductsService {
   private url = 'https://fakestoreapi.com/products';
+  private products: Product[] = [];
 
   constructor(private http: HttpClient) {}
 
-  getProducts(limit: string): Observable<Product[]> {
-    this.url = this.url + limit;
+  fetchProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(this.url);
+  }
+
+  setProducts(products: Product[]) {
+    this.products = products;
+  }
+
+  getProducts() {
+    return this.products;
   }
 }
